@@ -1,0 +1,1687 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ApnaTheatre</title>
+  <link rel="shortcut icon" href="./Images/Logo/Title.jpeg" type="image/x-icon">
+
+  <!-- Font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Noto+Serif+Lao:wght@600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link href="./static/style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="static/bootstrap.min.css">
+  <link rel="stylesheet" href="static/style-min.css">
+  <link rel="stylesheet" href="cards.css">
+  <script src="https://kit.fontawesome.com/aadd87210d.js" crossorigin="anonymous"></script>
+
+</head>
+
+<!------------------------Scroll to top button------------------------------------------------>
+<style>
+
+  .fa-brands:hover{
+    background-color: #E4F9F5;
+    color: #30E3CA;
+  }
+  .fa-solid:hover{
+    background-color: #40514E;
+    color: #30E3CA;
+  }
+
+  .buddy{
+    cursor: pointer;
+  }
+  #scrollToTopButton {
+    position: fixed;
+    bottom: 40px;
+    right: 25px;
+    font-size: 25px;
+    z-index: 99;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    color: #30E3CA;
+    color: black;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 6px;
+    border-radius: 50%;
+  }
+
+#scrollToTopButton:hover,i:hover {
+    background-color: #11999E;
+    color: #30E3CA;
+  }
+
+  .navbar-nav{
+    display: flex;
+    align-items: center;
+    padding: 0px 7.5px;
+  }
+
+  .maincontainer h3 {
+    color: white;
+    text-align: center;
+}
+
+.container {
+  text-align: center;
+}
+
+
+#nav:hover
+{
+  background-color:#30E3CA!important;
+
+}
+#navbarNav.nav-item.nav-link a:hover{
+  color: #30E3CA;
+}
+.nav-link :hover{
+  color:#30E3CA;
+}
+.fas:hover{background: none!important ;}
+.nav-item{ flex-wrap:wrap;}
+.menu li a:hover {
+color: #30E3CA !important;
+opacity: 0.5;
+}
+
+.nav-item :hover{
+  margin-bottom: 10px;
+  border-bottom: 3px;
+  border-color: #30E3CA;
+  border-bottom-style: solid;
+}
+
+
+#header-nav .nav-link a:hover{
+  color: blue;
+}
+</style>
+<script>
+  setTimeout(function () {
+    $('.section').fadeToggle();
+  }, 4000);
+
+</script>
+
+<body>
+
+
+
+
+  <div class="scroll-bar" style="background-color:#E4F9F5;">
+    <!-- navbar starts -->
+
+    <nav class="navbar navbar-expand-lg navbar-custom" id="header-nav">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home.html"><img class="logo" src="Images/Logo/Streamverse_logo.png" alt="" width="30"
+            height="24"></a>
+        <button id="nav" class="navbar-toggler" id="nav" style="background-color:#30E3CA;" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" style="background-color:#30E3CA;"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item" >
+              <a class="nav-link active" aria-current="page" style="color:#40514E;" href="home.html" onMouseOver="this.style.color='#30E3CA'" onMouseOut="this.style.color='#40514E'">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="movies.html" style="color:#40514E;" onMouseOver="this.style.color='#30E3CA'" onMouseOut="this.style.color='#40514E'">Movies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="web-series.html" style="color:#40514E;" onMouseOver="this.style.color='#30E3CA'" onMouseOut="this.style.color='#40514E'">Web Series</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="kids.html" style="color:#40514E;" onMouseOver="this.style.color='#30E3CA'" onMouseOut="this.style.color='#40514E'">Kids</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="anime.html" style="color:#40514E;" onMouseOver="this.style.color='#30E3CA'" onMouseOut="this.style.color='#40514E'">Anime</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="premium.html" style="color:#40514E;" onMouseOver="this.style.color='#30E3CA'" onMouseOut="this.style.color='#40514E'">Premium</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contactus.html" style="color:#40514E;" onMouseOver="this.style.color='#30E3CA'" onMouseOut="this.style.color='#40514E'">Contact Us</a>
+            </li>
+
+            <div style="position: relative; display: inline-block; padding-top: 5px; margin-left:450px;">
+              <li>
+                <button  type="button" class=" btn btn-lg btn-light" style="border-radius:100%;background-color:#40514E; margin-bottom:10px;" ><i class="fa-solid fa-user"></i></button>
+              </li>
+            </div>
+            <div style="position: relative; display: inline-block; padding-top: 5px; padding-left: 10px; padding-right:10px;">
+              <li>
+                <button  type="button" class=" btn btn-lg btn-light logout" style="background-color:#40514E;border-radius:75%; margin-bottom:10px;" onclick="logout()"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+              </li>
+            </div>
+
+          </ul>
+
+        </div>
+      </div>
+      </nav>
+
+      <div>
+
+
+      <form id="searchForm" class="d-flex" style="width:70%; margin-left:250px; z-index:1; margin-top:20px;">
+        <input class="form-control me-2" type="text" id="searchText" style="border-radius:45px; height:70px; font-size:18px; background-color:#EEEEEE;" placeholder="Search" aria-label="Search">
+        <button class="btn btn-lg" style="background-color:#40514E; color:#E4F9F5; border-radius:100%; padding: 0 25px;" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+          </div>
+
+      <div>
+
+            <label style="margin-bottom:0px; margin-top:20px; z-index: -1;" class="online">What's Popular?</label>
+      </div>
+
+        <!-- navbar ends -->
+
+
+
+
+
+    <div class="buddy">
+
+      <div class="slider"  >
+        <div class="slide_track"  >
+
+          <div class="slide" >
+            <img class="slide-img"  src="./Images/last.jpg" alt="" />
+          </div>
+
+          <div class="slide">
+            <img class="slide-img" src="./Images/bat1.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img class="slide-img" src="./Images/breaking.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img class="slide-img" src="./Images/criminal.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img class="slide-img" src="./Images/got.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img class="slide-img" src="./Images/infinity.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img class="slide-img" src="./Images/kota.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img class="slide-img" src="./Images/mirzapur.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img class="slide-img" src="./Images/sacred.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img class="slide-img" src="./Images/scam.jpg" alt="" />
+          </div>
+
+          <div class="slide">
+            <img class="slide-img" src="./Images/last.jpg" alt="" />
+          </div>
+
+          <div class="slide">
+            <img class="slide-img" src="./Images/bat1.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img class="slide-img" src="./Images/breaking.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img class="slide-img" src="./Images/criminal.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img class="slide-img" src="./Images/got.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img class="slide-img" src="./Images/infinity.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img class="slide-img" src="./Images/kota.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img class="slide-img" src="./Images/mirzapur.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img class="slide-img" src="./Images/sacred.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img class="slide-img" src="./Images/scam.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+<div class="maincontainer">
+  <div class="vl"><h2 style="margin-left:10px;padding-top:10px; font-size:30px; font-weight:900;">Latest Movies</h2></div>
+  <div class="media-scroller1 snaps-inline" style="background-color:#E4F9F5; margin-top: 0px; padding-top: 0px;">
+    <div class="media-element_new">
+      <img class="horizontal-img" src="Images/inception.jpg" alt="">
+
+      <div class = "overlay"></div>
+      <div class = "overlay-content">
+        <h1 style="  text-align: center;">Inception</h1>
+        <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+        <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+        <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+        <br />
+        <br />
+
+        <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+        <script type="text/javascript">
+          function openWin24(){
+            window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+          }
+        </script>
+        <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+      </div>
+    </div>
+
+  <div class="media-element_new">
+    <img class="horizontal-img" src="Images/bat.jpg" alt="">
+    <div class = "overlay"></div>
+    <div class = "overlay-content">
+      <h1 style="  text-align: center;">Inception</h1>
+      <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+      <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+      <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+      <br />
+      <br />
+
+      <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+      <script type="text/javascript">
+        function openWin24(){
+          window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+        }
+      </script>
+      <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+    </div>
+  </div>
+
+
+  <div class="media-element_new">
+    <img src="Images/parasite.jpg" alt="">
+    <div class = "overlay"></div>
+    <div class = "overlay-content">
+      <h1 style="  text-align: center;">Inception</h1>
+      <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+      <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+      <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+      <br />
+      <br />
+
+      <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+      <script type="text/javascript">
+        function openWin24(){
+          window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+        }
+      </script>
+      <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+    </div>
+  </div>
+
+
+  <div class="media-element_new">
+    <img src="Images/Were_the_Millers_poster.jpg" alt="">
+    <div class = "overlay"></div>
+    <div class = "overlay-content">
+      <h1 style="  text-align: center;">Inception</h1>
+      <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+      <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+      <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+      <br />
+      <br />
+
+      <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+      <script type="text/javascript">
+        function openWin24(){
+          window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+        }
+      </script>
+      <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+    </div>
+
+  </div>
+
+
+  <div class="media-element_new">
+    <img src="Images/the terminal.jpg" alt="">
+    <div class = "overlay"></div>
+    <div class = "overlay-content">
+      <h1 style="  text-align: center;">Inception</h1>
+      <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+      <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+      <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+      <br />
+      <br />
+
+      <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+      <script type="text/javascript">
+        function openWin24(){
+          window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+        }
+      </script>
+      <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+    </div>
+
+  </div>
+
+
+  <div class="media-element_new">
+    <img src="Images/Matrix.jpg" alt="">
+    <div class = "overlay"></div>
+    <div class = "overlay-content">
+      <h1 style="  text-align: center;">Inception</h1>
+      <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+      <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+      <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+      <br />
+      <br />
+
+      <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+      <script type="text/javascript">
+        function openWin24(){
+          window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+        }
+      </script>
+      <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+    </div>
+
+  </div>
+
+
+  <div class="media-element_new">
+    <img src="Images/joker.jpg" alt="">
+    <div class = "overlay"></div>
+    <div class = "overlay-content">
+      <h1 style="  text-align: center;">Inception</h1>
+      <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+      <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+      <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+      <br />
+      <br />
+
+      <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+      <script type="text/javascript">
+        function openWin24(){
+          window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+        }
+      </script>
+      <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+    </div>
+
+  </div>
+
+
+  <div class="media-element_new">
+    <img src="Images/Hamilton.jpg" alt="">
+    <div class = "overlay"></div>
+    <div class = "overlay-content">
+      <h1 style="  text-align: center;">Inception</h1>
+      <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+      <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+      <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+      <br />
+      <br />
+
+      <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+      <script type="text/javascript">
+        function openWin24(){
+          window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+        }
+      </script>
+      <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+    </div>
+
+  </div>
+
+
+
+  <div class="media-element_new">
+    <img src="Images/goodfellas.jpg" alt="">
+    <div class = "overlay"></div>
+    <div class = "overlay-content">
+      <h1 style="  text-align: center;">Inception</h1>
+      <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+      <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+      <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+      <br />
+      <br />
+
+      <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+      <script type="text/javascript">
+        function openWin24(){
+          window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+        }
+      </script>
+      <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+    </div>
+
+  </div>
+
+
+  <div class="media-element_new">
+    <img src="Images/the shawshank.jpg" alt="">
+    <div class = "overlay"></div>
+    <div class = "overlay-content">
+      <h1 style="  text-align: center;">Inception</h1>
+      <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+      <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+      <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+      <br />
+      <br />
+
+      <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+      <script type="text/javascript">
+        function openWin24(){
+          window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+        }
+      </script>
+      <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+    </div>
+
+  </div>
+
+
+  <div class="media-element_new">
+    <img src="Images/green mile.jpg" alt="">
+    <div class = "overlay"></div>
+    <div class = "overlay-content">
+      <h1 style="  text-align: center;">Inception</h1>
+      <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+      <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+      <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+      <br />
+      <br />
+
+      <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+      <script type="text/javascript">
+        function openWin24(){
+          window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+        }
+      </script>
+      <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+    </div>
+
+  </div>
+
+
+  <div class="media-element_new">
+    <img src="Images/inter.jpg" alt="">
+    <div class = "overlay"></div>
+    <div class = "overlay-content">
+      <h1 style="  text-align: center;">Inception</h1>
+      <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+      <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+      <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+      <br />
+      <br />
+
+      <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+      <script type="text/javascript">
+        function openWin24(){
+          window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+        }
+      </script>
+      <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+    <!---next block -->
+
+      <div class="vl"><h2 style="margin-left:10px;padding-top:10px; font-size:30px;">Latest TV Shows</h2></div>
+
+    <div class="media-scroller1 snaps-inline" style="background-color:#E4F9F5; margin-top:0px; padding-top:0px;">
+
+      <div class="media-element_new">
+        <img class="horizontal-img" src="Images/chernobyl.jpg" alt="">
+
+        <div class = "overlay"></div>
+        <div class = "overlay-content">
+          <h1 style="  text-align: center;">Inception</h1>
+          <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+          <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+          <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+          <br />
+          <br />
+
+          <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+          <script type="text/javascript">
+            function openWin24(){
+              window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+        <img class="horizontal-img" src="Images/black mirror.jpg" alt="">
+
+        <div class = "overlay"></div>
+        <div class = "overlay-content">
+          <h1 style="  text-align: center;">Inception</h1>
+          <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+          <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+          <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+          <br />
+          <br />
+
+          <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+          <script type="text/javascript">
+            function openWin24(){
+              window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+        <img class="horizontal-img" src="Images/got.jpg" alt="">
+
+        <div class = "overlay"></div>
+        <div class = "overlay-content">
+          <h1 style="  text-align: center;">Inception</h1>
+          <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+          <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+          <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+          <br />
+          <br />
+
+          <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+          <script type="text/javascript">
+            function openWin24(){
+              window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+        <img class="horizontal-img" src="Images/money.jpg" alt="">
+
+        <div class = "overlay"></div>
+        <div class = "overlay-content">
+          <h1 style="  text-align: center;">Inception</h1>
+          <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+          <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+          <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+          <br />
+          <br />
+
+          <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+          <script type="text/javascript">
+            function openWin24(){
+              window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+        <img class="horizontal-img" src="Images/luci.jpg" alt="">
+
+        <div class = "overlay"></div>
+        <div class = "overlay-content">
+          <h1 style="  text-align: center;">Inception</h1>
+          <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+          <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+          <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+          <br />
+          <br />
+
+          <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+          <script type="text/javascript">
+            function openWin24(){
+              window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+        <img class="horizontal-img" src="Images/sherlock.jpg" alt="">
+
+        <div class = "overlay"></div>
+        <div class = "overlay-content">
+          <h1 style="  text-align: center;">Inception</h1>
+          <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+          <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+          <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+          <br />
+          <br />
+
+          <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+          <script type="text/javascript">
+            function openWin24(){
+              window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+        <img class="horizontal-img" src="Images/crown.jpeg" alt="">
+
+        <div class = "overlay"></div>
+        <div class = "overlay-content">
+          <h1 style="  text-align: center;">Inception</h1>
+          <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+          <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+          <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+          <br />
+          <br />
+
+          <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+          <script type="text/javascript">
+            function openWin24(){
+              window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+        <img class="horizontal-img" src="Images/firefly.jpg" alt="">
+
+        <div class = "overlay"></div>
+        <div class = "overlay-content">
+          <h1 style="  text-align: center;">Inception</h1>
+          <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+          <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+          <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+          <br />
+          <br />
+
+          <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+          <script type="text/javascript">
+            function openWin24(){
+              window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+        <img class="horizontal-img" src="Images/top of the lake.jpg" alt="">
+
+        <div class = "overlay"></div>
+        <div class = "overlay-content">
+          <h1 style="  text-align: center;">Inception</h1>
+          <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+          <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+          <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+          <br />
+          <br />
+
+          <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+          <script type="text/javascript">
+            function openWin24(){
+              window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+        <img class="horizontal-img" src="Images/breaking.jpg" alt="">
+
+        <div class = "overlay"></div>
+        <div class = "overlay-content">
+          <h1 style="  text-align: center;">Inception</h1>
+          <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+          <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+          <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+          <br />
+          <br />
+
+          <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+          <script type="text/javascript">
+            function openWin24(){
+              window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+        <img class="horizontal-img" src="Images/peaky.jpg" alt="">
+
+        <div class = "overlay"></div>
+        <div class = "overlay-content">
+          <h1 style="  text-align: center;">Inception</h1>
+          <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+          <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+          <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+          <br />
+          <br />
+
+          <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+          <script type="text/javascript">
+            function openWin24(){
+              window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+        <img class="horizontal-img" src="Images/ozark.jpg" alt="">
+
+        <div class = "overlay"></div>
+        <div class = "overlay-content">
+          <h1 style="  text-align: center;">Inception</h1>
+          <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+          <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+          <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+          <br />
+          <br />
+
+          <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+          <script type="text/javascript">
+            function openWin24(){
+              window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+        <img class="horizontal-img" src="Images/stranger.jpg" alt="">
+
+        <div class = "overlay"></div>
+        <div class = "overlay-content">
+          <h1 style="  text-align: center;">Inception</h1>
+          <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+          <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+          <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+          <br />
+          <br />
+
+          <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+          <script type="text/javascript">
+            function openWin24(){
+              window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+        <img class="horizontal-img" src="Images/witcher.jpg" alt="">
+
+        <div class = "overlay"></div>
+        <div class = "overlay-content">
+          <h1 style="  text-align: center;">Inception</h1>
+          <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+          <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+          <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+          <br />
+          <br />
+
+          <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+          <script type="text/javascript">
+            function openWin24(){
+              window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+        <img class="horizontal-img" src="Images/wanda.jpg" alt="">
+
+        <div class = "overlay"></div>
+        <div class = "overlay-content">
+          <h1 style="  text-align: center;">Inception</h1>
+          <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+          <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+          <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+          <br />
+          <br />
+
+          <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+          <script type="text/javascript">
+            function openWin24(){
+              window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+        <img class="horizontal-img" src="Images/mirzapur.jpg" alt="">
+
+        <div class = "overlay"></div>
+        <div class = "overlay-content">
+          <h1 style="  text-align: center;">Inception</h1>
+          <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+          <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+          <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+          <br />
+          <br />
+
+          <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+          <script type="text/javascript">
+            function openWin24(){
+              window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+        <img class="horizontal-img" src="Images/sacred.jpg" alt="">
+
+        <div class = "overlay"></div>
+        <div class = "overlay-content">
+          <h1 style="  text-align: center;">Inception</h1>
+          <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+          <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+          <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+          <br />
+          <br />
+
+          <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+          <script type="text/javascript">
+            function openWin24(){
+              window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+        <img class="horizontal-img" src="Images/kota.jpg" alt="">
+
+        <div class = "overlay"></div>
+        <div class = "overlay-content">
+          <h1 style="  text-align: center;">Inception</h1>
+          <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+          <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+          <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+          <br />
+          <br />
+
+          <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+          <script type="text/javascript">
+            function openWin24(){
+              window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+        <img class="horizontal-img" src="Images/tvf.jpg" alt="">
+
+        <div class = "overlay"></div>
+        <div class = "overlay-content">
+          <h1 style="  text-align: center;">Inception</h1>
+          <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+          <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+          <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+          <br />
+          <br />
+
+          <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+          <script type="text/javascript">
+            function openWin24(){
+              window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+        <img class="horizontal-img" src="Images/mismatched.jpg" alt="">
+
+        <div class = "overlay"></div>
+        <div class = "overlay-content">
+          <h1 style="  text-align: center;">Inception</h1>
+          <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+          <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+          <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+          <br />
+          <br />
+
+          <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+          <script type="text/javascript">
+            function openWin24(){
+              window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+        <img class="horizontal-img" src="Images/scam.jpg" alt="">
+
+        <div class = "overlay"></div>
+        <div class = "overlay-content">
+          <h1 style="  text-align: center;">Inception</h1>
+          <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+          <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+          <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+          <br />
+          <br />
+
+          <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+          <script type="text/javascript">
+            function openWin24(){
+              window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+        <img class="horizontal-img" src="Images/lok.jpg" alt="">
+
+        <div class = "overlay"></div>
+        <div class = "overlay-content">
+          <h1 style="  text-align: center;">Inception</h1>
+          <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+          <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+          <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+          <br />
+          <br />
+
+          <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+          <script type="text/javascript">
+            function openWin24(){
+              window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+        </div>
+      </div>
+
+
+
+    </div>
+
+  <!---third block -->
+
+
+
+
+
+
+
+
+
+
+
+  <div class="vl"><h2 style="margin-left:10px;padding-top:10px; font-size:30px;">Kids</h2></div>
+
+  <div class="media-scroller1 snaps-inline" style="background-color:#E4F9F5; margin-top:0px; padding-top:0px;">
+
+    <div class="media-element_new">
+      <img class="horizontal-img" src="Images/frozen.jpg" alt="">
+
+      <div class = "overlay"></div>
+      <div class = "overlay-content">
+        <h1 style="  text-align: center;">Inception</h1>
+        <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+        <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+        <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+        <br />
+        <br />
+
+        <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+        <script type="text/javascript">
+          function openWin24(){
+            window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+          }
+        </script>
+        <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+      </div>
+    </div>
+
+    <div class="media-element_new">
+      <img class="horizontal-img" src="Images/cars.jpg" alt="">
+
+      <div class = "overlay"></div>
+      <div class = "overlay-content">
+        <h1 style="  text-align: center;">Inception</h1>
+        <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+        <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+        <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+        <br />
+        <br />
+
+        <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+        <script type="text/javascript">
+          function openWin24(){
+            window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+          }
+        </script>
+        <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+      </div>
+    </div>
+
+    <div class="media-element_new">
+      <img class="horizontal-img" src="Images/puss.jpg" alt="">
+
+      <div class = "overlay"></div>
+      <div class = "overlay-content">
+        <h1 style="  text-align: center;">Inception</h1>
+        <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+        <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+        <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+        <br />
+        <br />
+
+        <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+        <script type="text/javascript">
+          function openWin24(){
+            window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+          }
+        </script>
+        <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+      </div>
+    </div>
+
+    <div class="media-element_new">
+      <img class="horizontal-img" src="Images/moana.jpg" alt="">
+
+      <div class = "overlay"></div>
+      <div class = "overlay-content">
+        <h1 style="  text-align: center;">Inception</h1>
+        <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+        <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+        <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+        <br />
+        <br />
+
+        <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+        <script type="text/javascript">
+          function openWin24(){
+            window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+          }
+        </script>
+        <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+      </div>
+    </div>
+
+    <div class="media-element_new">
+      <img class="horizontal-img" src="Images/madagascer.jpg" alt="">
+
+      <div class = "overlay"></div>
+      <div class = "overlay-content">
+        <h1 style="  text-align: center;">Inception</h1>
+        <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+        <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+        <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+        <br />
+        <br />
+
+        <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+        <script type="text/javascript">
+          function openWin24(){
+            window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+          }
+        </script>
+        <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+      </div>
+    </div>
+
+    <div class="media-element_new">
+      <img class="horizontal-img" src="Images/tangled.jpg" alt="">
+
+      <div class = "overlay"></div>
+      <div class = "overlay-content">
+        <h1 style="  text-align: center;">Inception</h1>
+        <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+        <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+        <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+        <br />
+        <br />
+
+        <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+        <script type="text/javascript">
+          function openWin24(){
+            window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+          }
+        </script>
+        <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+      </div>
+    </div>
+
+    <div class="media-element_new">
+      <img class="horizontal-img" src="Images/despicable.jpg" alt="">
+
+      <div class = "overlay"></div>
+      <div class = "overlay-content">
+        <h1 style="  text-align: center;">Inception</h1>
+        <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+        <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+        <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+        <br />
+        <br />
+
+        <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+        <script type="text/javascript">
+          function openWin24(){
+            window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+          }
+        </script>
+        <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+      </div>
+    </div>
+
+    <div class="media-element_new">
+      <img class="horizontal-img" src="Images/minions.jpg" alt="">
+
+      <div class = "overlay"></div>
+      <div class = "overlay-content">
+        <h1 style="  text-align: center;">Inception</h1>
+        <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+        <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+        <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+        <br />
+        <br />
+
+        <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+        <script type="text/javascript">
+          function openWin24(){
+            window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+          }
+        </script>
+        <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+      </div>
+    </div>
+
+    <div class="media-element_new">
+      <img class="horizontal-img" src="Images/sponge.jpg" alt="">
+
+      <div class = "overlay"></div>
+      <div class = "overlay-content">
+        <h1 style="  text-align: center;">Inception</h1>
+        <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+        <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+        <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+        <br />
+        <br />
+
+        <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+        <script type="text/javascript">
+          function openWin24(){
+            window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+          }
+        </script>
+        <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+      </div>
+    </div>
+
+    <div class="media-element_new">
+      <img class="horizontal-img" src="Images/incre.jpg" alt="">
+
+      <div class = "overlay"></div>
+      <div class = "overlay-content">
+        <h1 style="  text-align: center;">Inception</h1>
+        <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+        <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+        <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+        <br />
+        <br />
+
+        <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+        <script type="text/javascript">
+          function openWin24(){
+            window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+          }
+        </script>
+        <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+      </div>
+    </div>
+
+    <div class="media-element_new">
+      <img class="horizontal-img" src="Images/walle.jpg" alt="">
+
+      <div class = "overlay"></div>
+      <div class = "overlay-content">
+        <h1 style="  text-align: center;">Inception</h1>
+        <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+        <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+        <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+        <br />
+        <br />
+
+        <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+        <script type="text/javascript">
+          function openWin24(){
+            window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+          }
+        </script>
+        <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+      </div>
+    </div>
+
+    <div class="media-element_new">
+      <img class="horizontal-img" src="Images/toy_story.jpg" alt="">
+
+      <div class = "overlay"></div>
+      <div class = "overlay-content">
+        <h1 style="  text-align: center;">Inception</h1>
+        <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+        <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+        <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+        <br />
+        <br />
+
+        <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+        <script type="text/javascript">
+          function openWin24(){
+            window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+          }
+        </script>
+        <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+      </div>
+    </div>
+
+
+
+  </div>
+
+
+
+
+      <div class="vl"><h2 style="margin-left:10px;padding-top:10px; font-size:30px;">Anime</h2></div>
+
+      <div class="media-scroller1 snaps-inline" style="background-color:#E4F9F5; margin-top:0px; padding-top:0px;">
+
+        <div class="media-element_new">
+          <img class="horizontal-img" src="Images/naruto.jpg" alt="">
+
+          <div class = "overlay"></div>
+          <div class = "overlay-content">
+            <h1 style="  text-align: center;">Inception</h1>
+            <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+            <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+            <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+            <br />
+            <br />
+
+            <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+            <script type="text/javascript">
+              function openWin24(){
+                window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+              }
+            </script>
+            <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+          </div>
+        </div>
+
+        <div class="media-element_new">
+          <img class="horizontal-img" src="Images/Aot.jpg" alt="">
+
+          <div class = "overlay"></div>
+          <div class = "overlay-content">
+            <h1 style="  text-align: center;">Inception</h1>
+            <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+            <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+            <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+            <br />
+            <br />
+
+            <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+            <script type="text/javascript">
+              function openWin24(){
+                window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+              }
+            </script>
+            <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+          </div>
+        </div>
+
+        <div class="media-element_new">
+          <img class="horizontal-img" src="Images/jjk.jpg" alt="">
+
+          <div class = "overlay"></div>
+          <div class = "overlay-content">
+            <h1 style="  text-align: center;">Inception</h1>
+            <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+            <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+            <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+            <br />
+            <br />
+
+            <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+            <script type="text/javascript">
+              function openWin24(){
+                window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+              }
+            </script>
+            <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+          </div>
+        </div>
+
+        <div class="media-element_new">
+          <img class="horizontal-img" src="Images/tokyo_revengers.jpg" alt="">
+
+          <div class = "overlay"></div>
+          <div class = "overlay-content">
+            <h1 style="  text-align: center;">Inception</h1>
+            <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+            <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+            <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+            <br />
+            <br />
+
+            <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+            <script type="text/javascript">
+              function openWin24(){
+                window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+              }
+            </script>
+            <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+          </div>
+        </div>
+
+        <div class="media-element_new">
+          <img class="horizontal-img" src="Images/demonSlayer.jpg" alt="">
+
+          <div class = "overlay"></div>
+          <div class = "overlay-content">
+            <h1 style="  text-align: center;">Inception</h1>
+            <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+            <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+            <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+            <br />
+            <br />
+
+            <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+            <script type="text/javascript">
+              function openWin24(){
+                window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+              }
+            </script>
+            <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+          </div>
+        </div>
+
+        <div class="media-element_new">
+          <img class="horizontal-img" src="Images/tokyo.jpg" alt="">
+
+          <div class = "overlay"></div>
+          <div class = "overlay-content">
+            <h1 style="  text-align: center;">Inception</h1>
+            <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+            <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+            <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+            <br />
+            <br />
+
+            <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+            <script type="text/javascript">
+              function openWin24(){
+                window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+              }
+            </script>
+            <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+          </div>
+        </div>
+
+        <div class="media-element_new">
+          <img class="horizontal-img" src="Images/vinland.jpg" alt="">
+
+          <div class = "overlay"></div>
+          <div class = "overlay-content">
+            <h1 style="  text-align: center;">Inception</h1>
+            <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+            <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+            <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+            <br />
+            <br />
+
+            <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+            <script type="text/javascript">
+              function openWin24(){
+                window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+              }
+            </script>
+            <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+          </div>
+        </div>
+
+        <div class="media-element_new">
+          <img class="horizontal-img" src="Images/mha.png" alt="">
+
+          <div class = "overlay"></div>
+          <div class = "overlay-content">
+            <h1 style="  text-align: center;">Inception</h1>
+            <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+            <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+            <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+            <br />
+            <br />
+
+            <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+            <script type="text/javascript">
+              function openWin24(){
+                window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+              }
+            </script>
+            <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+          </div>
+        </div>
+
+        <div class="media-element_new">
+          <img class="horizontal-img" src="Images/blue.jpg" alt="">
+
+          <div class = "overlay"></div>
+          <div class = "overlay-content">
+            <h1 style="  text-align: center;">Inception</h1>
+            <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+            <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+            <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+            <br />
+            <br />
+
+            <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+            <script type="text/javascript">
+              function openWin24(){
+                window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+              }
+            </script>
+            <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+          </div>
+        </div>
+
+        <div class="media-element_new">
+          <img class="horizontal-img" src="Images/fullMetal.jpg" alt="">
+
+          <div class = "overlay"></div>
+          <div class = "overlay-content">
+            <h1 style="  text-align: center;">Inception</h1>
+            <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+            <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+            <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+            <br />
+            <br />
+
+            <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+            <script type="text/javascript">
+              function openWin24(){
+                window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+              }
+            </script>
+            <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+          </div>
+        </div>
+
+        <div class="media-element_new">
+          <img class="horizontal-img" src="Images/deathnote.jpg" alt="">
+
+          <div class = "overlay"></div>
+          <div class = "overlay-content">
+            <h1 style="  text-align: center;">Inception</h1>
+            <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+            <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+            <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+            <br />
+            <br />
+
+            <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+            <script type="text/javascript">
+              function openWin24(){
+                window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+              }
+            </script>
+            <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+          </div>
+        </div>
+
+        <div class="media-element_new">
+          <img class="horizontal-img" src="Images/goh.png" alt="">
+
+          <div class = "overlay"></div>
+          <div class = "overlay-content">
+            <h1 style="  text-align: center;">Inception</h1>
+            <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+            <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+            <button class="btn_i b1_i"  title="IMDb" style="color:white">9.4</button>
+            <br />
+            <br />
+
+            <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+            <script type="text/javascript">
+              function openWin24(){
+                window.open("https://youtu.be/YoHD9XEInc0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+              }
+            </script>
+            <button style="margin: 0 10px;"class="btn_i b4_i">▶Play</button>
+          </div>
+        </div>
+
+
+
+      </div>
+
+
+
+
+
+    <!-------------------------------Footer-------------------------------->
+
+    <div class="footer-basic">
+        <footer>
+            <div class="social"><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-github"></i></a><a href="#"><i class="fa-brands fa-twitter"></i></a><a href="#"><i class="fa-brands fa-facebook"></i></a></div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Home</a></li>
+                <li class="list-inline-item"><a href="#">Premium</a></li>
+                <li class="list-inline-item"><a href="#">About</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">Streamverse © 2023</p>
+        </footer>
+      </div>
+
+
+    <!----------------------scroll back to top button-->
+    <button id="scrollToTopButton" title="Go to top">
+      <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+    </button>
+    <script>
+      $(document).ready(function () {
+        var scrollTopButton = document.getElementById("scrollToTopButton");
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollTopButton.style.display = "block";
+          } else {
+            scrollTopButton.style.display = "none";
+          }
+        }
+
+        $("#scrollToTopButton").click(function () {
+          $('html ,body').animate({ scrollTop: 0 }, 10)
+        });
+      });
+    </script>
+
+    <!-- footer scripts -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="https://daniellaharel.com/raindrops/js/raindrops.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/main-min.js"></script>
+
+    <script>
+      jQuery('#waterdrop').raindrops({
+        color: '#292c2f',
+        canvasHeight: 150,
+        density: 0.1,
+        frequency: 20
+      });
+    </script>
+    <script>
+      function logout(){
+        window.location.replace("login.html");
+      }
+      </script>
+    <!-- bootsstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"></script>
+    <script src="./static/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,2439 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Streamverse</title>
+  <link rel="shortcut icon" href="./Images/Logo/Title_new.png" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Noto+Serif+Lao:wght@600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" />
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+  <link rel="stylesheet" href="./static/style-min.css">
+  <link rel="stylesheet" href="./cards.css">
+  <link rel="stylesheet" href="./static/style.css">
+  <link rel="stylesheet" href="./static/app.css">
+
+
+  <script src="https://kit.fontawesome.com/aadd87210d.js" crossorigin="anonymous"></script>
+
+
+  <!------------------------Scroll to top button------------------------------------------------>
+  <style>
+    #scrollToTopButton {
+      position: fixed;
+      bottom: 40px;
+      right: 25px;
+      font-size: 25px;
+      z-index: 99;
+      width: 50px;
+      height: 50px;
+      background-color: #11999E;
+      color: black;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      padding: 6px;
+      border-radius: 50%;
+    }
+
+    #scrollToTopButton:hover,
+    i:hover {
+      background-color: #30E3CA;
+      color: #2c2f30;
+    }
+
+
+    .scroll-bar {
+      height: auto;
+      width: auto;
+      margin: auto;
+      overflow-y: auto;
+      overflow-x: hidden;
+      max-width: 100%;
+    }
+
+    ::-webkit-scrollbar-track {
+      border: 0px solid #2c2f30;
+      background-color: red;
+    }
+
+    ::-webkit-scrollbar {
+      width: 0px;
+      background-color: #2c2f30;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: black;
+      border-radius: 10px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+
+
+    .menu li a:hover {
+      color: red !important;
+      opacity: 0.5;
+    }
+
+    #variety {
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .logo {
+      width: 81px;
+      height: 52px;
+    }
+
+    .navbar-nav {
+      display: flex;
+      align-items: center;
+      padding: 0px 7.5px;
+    }
+
+    .logo {
+      width: 110px;
+      height: 90px;
+      padding: 3px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    #nav:hover {
+      background-color: #30E3CA !important;
+
+    }
+
+    #navbarNav.nav-item.nav-link a:hover {
+      color: #30E3CA;
+    }
+
+    .nav-link :hover {
+      color: #30E3CA;
+    }
+
+    .fas:hover {
+      background: none !important;
+    }
+
+    .nav-item {
+      flex-wrap: wrap;
+    }
+
+    .menu li a:hover {
+      color: #30E3CA !important;
+      opacity: 0.5;
+    }
+
+    .nav-item :hover {
+      margin-bottom: 10px;
+      border-bottom: 3px;
+      border-color: #30E3CA;
+      border-bottom-style: solid;
+    }
+
+
+    #header-nav .nav-link a:hover {
+      color: blue;
+    }
+  </style>
+  <script>
+    setTimeout(function() {
+      $('.section').fadeToggle();
+    }, 4000);
+  </script>
+
+  </style>
+</head>
+
+<body>
+
+  <div class="scroll-bar" style="background-color:#E4F9F5;">
+    <!-- navbar starts -->
+
+    <nav class="navbar navbar-expand-lg navbar-custom" id="header-nav">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home.html"><img class="logo" src="Images/Logo/Streamverse_logo.png" alt="" width="30" height="24"></a>
+        <button id="nav" class="navbar-toggler" id="nav" style="background-color:#30E3CA;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" style="background-color:#30E3CA;"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" style="color:#40514E;" href="home.html" onMouseOver="this.style.color='#30E3CA'" onMouseOut="this.style.color='#40514E'">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="movies.html" style="color:#40514E;" onMouseOver="this.style.color='#30E3CA'" onMouseOut="this.style.color='#40514E'">Movies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="web-series.html" style="color:#40514E;" onMouseOver="this.style.color='#30E3CA'" onMouseOut="this.style.color='#40514E'">Web Series</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="kids.html" style="color:#40514E;" onMouseOver="this.style.color='#30E3CA'" onMouseOut="this.style.color='#40514E'">Kids</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="anime.html" style="color:#40514E;" onMouseOver="this.style.color='#30E3CA'" onMouseOut="this.style.color='#40514E'">Anime</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="premium.html" style="color:#40514E;" onMouseOver="this.style.color='#30E3CA'" onMouseOut="this.style.color='#40514E'">Premium</a>
+            </li>
+
+            <li>
+              <!-- Genre dropdown starts-->
+              <div>
+                <div class="dropdown" style="position: relative; display: inline-block; padding-top: 5px; padding-left: 10px; padding-right:30px; ">
+                  <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton" style="font-size:20px; border-color:#40514E; color:#40514E; border-radius:25px; z-index:2">
+                    Genres
+                  </button>
+                  <div class="dropdown-content" style="background-color: #40514E;position: relative z-index: 1000;">
+                    <a href="#new" class="drop-content">New Releases</a>
+                    <a href="#a&a" class="drop-content">Action & Adventure</a>
+                    <a href="#s&t" class="drop-content">Suspense & Thriller</a>
+                    <a href="#horror" class="drop-content">Horror</a>
+                    <a href="#scfi" class="drop-content">Science Fiction</a>
+                    <a href="#fantasy" class="drop-content">Fantasy</a>
+                    <a href="#comedy" class="drop-content">Comedy</a>
+                    <a href="#romance" class="drop-content">Romance</a>
+                  </div>
+                </div>
+              </div>
+
+            </li>
+
+
+            <li>
+              <!-- Genre dropdown starts-->
+
+            <li>
+              <div>
+                <form id="searchForm" class="d-flex" style="width:70%; margin-left:30px; z-index:1;">
+                  <input class="form-control me-2" type="text" id="searchText" style="border-radius:45px; height:40px; width:400px; font-size:18px; background-color:#EEEEEE;" placeholder="Search" aria-label="Search">
+                  <button class="btn" style="background-color:#40514E; color:#E4F9F5; border-radius:50%;" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+              </div>
+            </li>
+
+            </li>
+            <div style="position: relative; display: inline-block; padding-top: 5px;">
+              <li>
+                <button type="button" class="btn  btn-lg btn-light" style="border-radius:100%;background-color:#40514E;  color:#E4F9F5; margin-bottom:10px;"><i class="fa-solid fa-user"></i></button>
+              </li>
+            </div>
+            <div style="position: relative; display: inline-block; padding-top: 5px; padding-left: 10px; padding-right:10px;">
+              <li>
+                <button type="button" class="btn  btn-lg btn-light logout" style="background-color:#40514E;border-radius: 50%; margin-bottom:10px;" onclick="logout()"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+              </li>
+            </div>
+
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+
+
+
+    <div class="hero-section">
+      <!-- HERO SLIDE -->
+      <div class="hero-slide">
+        <div class="owl-carousel carousel-nav-center" id="hero-carousel">
+          <!-- SLIDE ITEM -->
+          <div class="hero-slide-item">
+            <img src="./Images/Anime/aot_cover.jpg" alt="">
+            <div class="overlay"></div>
+            <div class="hero-slide-item-content">
+              <div class="item-content-wraper">
+                <div class="item-content-title top-down">
+                  Attack On Titans
+                  <hr />
+                </div>
+                <div class="item-content-description top-down delay-4" style="color:#30E3CA;">
+                  #1 Spotlight
+                </div>
+                <div class="movie-infos top-down delay-2">
+                  <div class="movie-info">
+                    <i class="bx bxs-star"></i>
+                    <span>9.0</span>
+                  </div>
+                  <div class="movie-info">
+                    <i class="bx bxs-time"></i>
+                    <span>23 mins</span>
+                  </div>
+                  <div class="movie-info">
+                    <span>HD</span>
+                  </div>
+                  <div class="movie-info">
+                    <span>PG-13</span>
+                  </div>
+                </div>
+                <div class="item-content-description top-down delay-4" style="color:#979797;">
+                  After his hometown is destroyed and his mother is killed, young Eren Jaeger vows to cleanse the earth of the giant humanoid Titans that have brought humanity to the brink of extinction.
+                </div>
+                <div class="item-action top-down delay-6">
+                  <a href="#" class="tbn btn-hover watch">
+                    <i class="bx bxs-right-arrow"></i>
+                    <span>Watch now</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END SLIDE ITEM -->
+          <!-- SLIDE ITEM -->
+          <div class="hero-slide-item">
+            <img src="./images/Anime/demon_cover.jpg" alt="">
+            <div class="overlay"></div>
+            <div class="hero-slide-item-content">
+              <div class="item-content-wraper">
+                <div class="item-content-title top-down">
+                  Demon Slayer
+                  <hr>
+                </div>
+                <div class="item-content-description top-down delay-4" style="color:#30E3CA;">
+                  #2 Spotlight
+                </div>
+                <div class="movie-infos top-down delay-2">
+                  <div class="movie-info">
+                    <i class="bx bxs-star"></i>
+                    <span>8.7</span>
+                  </div>
+                  <div class="movie-info">
+                    <i class="bx bxs-time"></i>
+                    <span>24 mins</span>
+                  </div>
+                  <div class="movie-info">
+                    <span>HD</span>
+                  </div>
+                  <div class="movie-info">
+                    <span>16+</span>
+                  </div>
+                </div>
+                <div class="item-content-description top-down delay-4" style="color:#979797;">
+                  A family is attacked by demons and only two members survive - Tanjiro and his sister Nezuko, who is turning into a demon slowly. Tanjiro sets out to become a demon slayer to avenge his family and cure his sister.
+                </div>
+                <div class="item-action top-down delay-6">
+                  <a href="#" class="tbn btn-hover">
+                    <i class="bx bxs-right-arrow"></i>
+                    <span>Watch now</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END SLIDE ITEM -->
+          <!-- SLIDE ITEM -->
+          <div class="hero-slide-item">
+            <img src="./images/Anime/chain_cover.jpg" alt="">
+            <div class="overlay"></div>
+            <div class="hero-slide-item-content">
+              <div class="item-content-wraper">
+                <div class="item-content-title top-down">
+                  Chainsaw Man
+                  <hr>
+                </div>
+                <div class="item-content-description top-down delay-4" style="color:#30E3CA;">
+                  #3 Spotlight
+                </div>
+                <div class="movie-infos top-down delay-2">
+                  <div class="movie-info">
+                    <i class="bx bxs-star"></i>
+                    <span>8.5</span>
+                  </div>
+                  <div class="movie-info">
+                    <i class="bx bxs-time"></i>
+                    <span>25 mins</span>
+                  </div>
+                  <div class="movie-info">
+                    <span>HD</span>
+                  </div>
+                  <div class="movie-info">
+                    <span>18+</span>
+                  </div>
+                </div>
+                <div class="item-content-description top-down delay-4" style="color:#979797;">
+                  Following a betrayal, a young man left for the dead is reborn as a powerful devil-human hybrid after merging with his pet devil and is soon enlisted into an organization dedicated to hunting devils.
+                </div>
+                <div class="item-action top-down delay-6">
+                  <a href="#" class="tbn btn-hover">
+                    <i class="bx bxs-right-arrow"></i>
+                    <span>Watch now</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END SLIDE ITEM -->
+          <div class="hero-slide-item">
+            <img src="./images/Anime/mha_cover.jpg" alt="">
+            <div class="overlay"></div>
+            <div class="hero-slide-item-content">
+              <div class="item-content-wraper">
+                <div class="item-content-title top-down">
+                  My Hero Academia
+                  <hr>
+                </div>
+                <div class="item-content-description top-down delay-4" style="color:#30E3CA;">
+                  #4 Spotlight
+                </div>
+                <div class="movie-infos top-down delay-2">
+                  <div class="movie-info">
+                    <i class="bx bxs-star"></i>
+                    <span>8.3</span>
+                  </div>
+                  <div class="movie-info">
+                    <i class="bx bxs-time"></i>
+                    <span>23 mins</span>
+                  </div>
+                  <div class="movie-info">
+                    <span>HD</span>
+                  </div>
+                  <div class="movie-info">
+                    <span>PG-13</span>
+                  </div>
+                </div>
+                <div class="item-content-description top-down delay-4" style="color:#979797;">
+                  A superhero-loving boy without any powers is determined to enroll in a prestigious hero academy and learn what it really means to be a hero.
+                </div>
+                <div class="item-action top-down delay-6">
+                  <a href="#" class="tbn btn-hover">
+                    <i class="bx bxs-right-arrow"></i>
+                    <span>Watch now</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--End of slide item -->
+
+          <div class="hero-slide-item">
+            <img src="./images/Anime/revevngers_cover.jpg" alt="">
+            <div class="overlay"></div>
+            <div class="hero-slide-item-content">
+              <div class="item-content-wraper">
+                <div class="item-content-title top-down">
+                  Tokyo Revengers
+                  <hr>
+                </div>
+                <div class="item-content-description top-down delay-4" style="color:#30E3CA;">
+                  #5 Spotlight
+                </div>
+                <div class="movie-infos top-down delay-2">
+                  <div class="movie-info">
+                    <i class="bx bxs-star"></i>
+                    <span>8.0</span>
+                  </div>
+                  <div class="movie-info">
+                    <i class="bx bxs-time"></i>
+                    <span>24 mins</span>
+                  </div>
+                  <div class="movie-info">
+                    <span>HD</span>
+                  </div>
+                  <div class="movie-info">
+                    <span>PG-13</span>
+                  </div>
+                </div>
+                <div class="item-content-description top-down delay-4" style="color:#979797;">
+                  Hanagaki Takemichi lives an unsatisfying life right up until his death. Waking up 12 years in the past, he reckons with the eventual fate of his friends and tries to prevent an unfortunate future.
+                </div>
+                <div class="item-action top-down delay-6">
+                  <a href="#" class="tbn btn-hover watch">
+                    <i class="bx bxs-right-arrow"></i>
+                    <span>Watch now</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--End of slide item-->
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- END HERO SLIDE -->
+  <!-- TOP MOVIES SLIDE -->
+
+  <div class="maincontainer" id="new">
+    <div class="vl">
+      <h2 style="margin-left:10px;padding-top:10px; font-size:30px; font-weight:900; margin-top:25px;">New Releases</h2>
+    </div>
+    <div class="media-scroller1 snaps-inline" style="background-color:#E4F9F5; margin-top: 10px; padding-top: 0px;">
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/tk.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 20px; margin-top:5px;">Tokyo Revengers: Christmas Showdown</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">R</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.0</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/chain.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 30px; margin-top:5px;">Chainsaw Man</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">R</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.5</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/aot.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 30px; margin-top:5px;">Attack On Titans</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 9.0</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/vinland.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 30px; margin-top:5px;">Vinland Saga: 2nd Season</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">R-17+</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.8</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/mhas6.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 30px; margin-top:5px;">My Hero Academia Season 6</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.3</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/daddy.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 30px; margin-top:5px;">Buddy Daddies</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 7.8</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/trigun.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 30px; margin-top:5px;">Trigun Stampede</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 7.4</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/bleach.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 25px; margin-top:5px;">Bleach: Thousand-Year Blood War</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 9.0</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/spy.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 30px; margin-top:5px;">Spy x Family, Part 2</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.5</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+  </div>
+
+  <!-- For You Section-->
+
+  <div class="maincontainer">
+    <div class="vl">
+      <h2 style="margin-left:10px;padding-top:10px; font-size:30px; font-weight:900; margin-top:25px;">Top Picks For You</h2>
+    </div>
+    <div class="media-scroller1 snaps-inline" style="background-color:#E4F9F5; margin-top: 10px; padding-top: 0px;">
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/aot.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 20px; margin-top:5px;">Attack On Titans</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 9.0</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/jjk.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 30px; margin-top:5px;">Jujutsu Kaisen</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.5</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/stone.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 25px; margin-top:5px;">Dr. Stone: Stone Wars</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.1</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/blue.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 30px; margin-top:5px;">Blue Lock</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.4</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/note.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 30px; margin-top:5px;">Death Note</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">16+</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 9.0</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/hunter.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 30px; margin-top:5px;">Hunter X Hunter</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 9.0</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/fullmetal.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 20px; margin-top:5px;">Fullmetal Alchemist: Brotherhood</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">R</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 9.1</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/mha.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 25px; margin-top:5px;">My Hero Academia</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.4</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/horimiya.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 30px; margin-top:5px;">Horimiya</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.1</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+  </div>
+
+  <!-- Action & Adventure -->
+
+  <div class="maincontainer" id="a&a">
+    <div class="vl">
+      <h2 style="margin-left:10px;padding-top:10px; font-size:30px; font-weight:900; margin-top:25px;">Action & Adventure</h2>
+    </div>
+    <div class="media-scroller1 snaps-inline" style="background-color:#E4F9F5; margin-top: 10px; padding-top: 0px;">
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/jojo.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 20px; margin-top:5px;">JoJo's Bizzare Adventure</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">R</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.5</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/pokemon.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 30px; margin-top:5px;">Pokemon</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 7.5</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/aot.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 30px; margin-top:5px;">Attack On Titans</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 9.0</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/clover.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 30px; margin-top:5px;">Black Clover</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.3</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/dbz.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 30px; margin-top:5px;">Dragon Ball Z</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.8</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/naruto.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 30px; margin-top:5px;">Naruto</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.4</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/onepiece.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 30px; margin-top:5px;">One Piece</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.9</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/bleach.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 25px; margin-top:5px;">Bleach: Thousand-Year Blood War</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 9.0</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/opm.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 30px; margin-top:5px;">One Punch Man</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.7</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+  </div>
+
+  <!-- Suspense and Thriller -->
+
+  <div class="maincontainer" id="s&t">
+    <div class="vl">
+      <h2 style="margin-left:10px;padding-top:10px; font-size:30px; font-weight:900; margin-top:25px;">Suspense & Thriller</h2>
+    </div>
+    <div class="media-scroller1 snaps-inline" style="background-color:#E4F9F5; margin-top: 10px; padding-top: 0px;">
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/monster.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 20px; margin-top:5px;">Monster</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">R+</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.7</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/erased.png" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 30px; margin-top:5px;">Erased</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">R</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.5</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/gate.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 30px; margin-top:5px;">Steins;Gate</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.8</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/deathnote.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 30px; margin-top:5px;">Death Note</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">R</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 9.0</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/codegeass.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 20px; margin-top:5px;">Code Geass: Lelouch of the Rebellion</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">R</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.7</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/promise.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 30px; margin-top:5px;">The Promised Neverland</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">R</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.3</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/parasyte.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 25px; margin-top:5px;">Parasyte-the maxim-</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">R</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.3</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/another.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 25px; margin-top:5px;">Another</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">R</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 7.4</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/rezero.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 20px; margin-top:5px;">Re:ZERO- Starting Life In Another World-</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">R</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.1</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+  </div>
+
+  <!-- Horror -->
+
+  <div class="maincontainer" id="horror">
+    <div class="vl">
+      <h2 style="margin-left:10px;padding-top:10px; font-size:30px; font-weight:900; margin-top:25px;">Horror</h2>
+    </div>
+    <div class="media-scroller1 snaps-inline" style="background-color:#E4F9F5; margin-top: 10px; padding-top: 0px;">
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/shiki.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 20px; margin-top:5px;">Shiki</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">R</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 7.6</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/another.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 30px; margin-top:5px;">Another</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">R</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 7.5</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/yamabashi.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 30px; margin-top:5px;">Yami shibai</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">R</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 7.1</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/hunt.png" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 30px; margin-top:5px;">Ghost Hunt</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 7.4</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/elfen.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 20px; margin-top:5px;">Elfen Lied</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">R+</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 7.9</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/crybaby.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 30px; margin-top:5px;">Devilman Crybaby</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">R+</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 7.6</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/corspe.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 25px; margin-top:5px;">Corpse Party: Tortured Souls</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">R+</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 6.4</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/hellgirl.png" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 25px; margin-top:5px;">Hell Girl</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">R+</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 7.4</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  </div>
+
+  <!-- Science Fiction -->
+
+  <div class="maincontainer" id="scfi">
+    <div class="vl">
+      <h2 style="margin-left:10px;padding-top:10px; font-size:30px; font-weight:900; margin-top:25px;">Sci-Fi</h2>
+    </div>
+    <div class="media-scroller1 snaps-inline" style="background-color:#E4F9F5; margin-top: 10px; padding-top: 0px;">
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/cowboy.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 20px; margin-top:5px;">Cowboy Bebop</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">R</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.9</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/psycopass.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 30px; margin-top:5px;">Psycho-Pass</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">R</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.2</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/gate.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 30px; margin-top:5px;">Steins;Gate</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.8</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/neon.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 25px; margin-top:5px;">Neon Genesis Evangelion</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.5</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/gurrenn.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 20px; margin-top:5px;">Tegen Toppa Gurren Lagann</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.3</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/codegeass.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 20px; margin-top:5px;">Code Geass: Leoluch Of The Rebellion</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">R</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.7</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/abyss.png" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 25px; margin-top:5px;">Made in Abyss</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">R+</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.4</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/box.png" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 25px; margin-top:5px;">Megalo Box</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">R</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 7.8</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  </div>
+
+  <!-- Fantasy -->
+
+  <div class="maincontainer" id="fantasy">
+    <div class="vl">
+      <h2 style="margin-left:10px;padding-top:10px; font-size:30px; font-weight:900; margin-top:25px;">Fantasy</h2>
+    </div>
+    <div class="media-scroller1 snaps-inline" style="background-color:#E4F9F5; margin-top: 10px; padding-top: 0px;">
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/sao.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 20px; margin-top:5px;">Sword Art Online</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 7.4</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/ghoul.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 30px; margin-top:5px;">Tokyo Ghoul</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">R</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 7.7</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/demon.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 30px; margin-top:5px;">Demon Slayer</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">R</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.7</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/abyss.png" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 25px; margin-top:5px;">Made In Abyss</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">R</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.4</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/fullmetal.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 20px; margin-top:5px;">Tegen Toppa Gurren Lagann</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">R</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 9.1</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/berserk.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 20px; margin-top:5px;">Berserk</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">R</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.7</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/bleach.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 25px; margin-top:5px;">Bleach: Thousand Year Blood War</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 9.0</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/sins.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 25px; margin-top:5px;">The Seven Deadly Sins</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 7.9</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+
+  <!-- Comedy -->
+
+  <div class="maincontainer" id="comedy">
+    <div class="vl">
+      <h2 style="margin-left:10px;padding-top:10px; font-size:30px; font-weight:900; margin-top:25px;">Comedy</h2>
+    </div>
+    <div class="media-scroller1 snaps-inline" style="background-color:#E4F9F5; margin-top: 10px; padding-top: 0px;">
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/nozaki.png" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 20px; margin-top:5px;">Monthly Girls Nozaki-Kun</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 7.6</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/ordinarylife.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 2
+
+        0px; margin-top:5px;">Nichijou: My Ordinary Life</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.3</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/gintama.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 30px; margin-top:5px;">Gintama</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">R</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.7</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/dandy.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 25px; margin-top:5px;">Space Dandy</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.1</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/saiki.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 20px; margin-top:5px;">The Disastrous life of Saiki K.</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.3</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/maidsama.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 20px; margin-top:5px;">Maid Sama!</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">R</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 7.9</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/kaguyasama.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 25px; margin-top:5px;">Kaguya-sama: Love is war</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.5</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/part-time.png" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 22px; margin-top:5px;">The Devil Is a Part-Timer!</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 7.5</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <!-- Romance -->
+
+  <div class="maincontainer" id="romace">
+    <div class="vl">
+      <h2 style="margin-left:10px;padding-top:10px; font-size:30px; font-weight:900; margin-top:25px;">Romance</h2>
+    </div>
+    <div class="media-scroller1 snaps-inline" style="background-color:#E4F9F5; margin-top: 10px; padding-top: 0px;">
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/horimiya.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 20px; margin-top:5px;">Horimiya</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.1</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/fruitbasket.png" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 2
+
+        0px; margin-top:5px;">Fruits Basket</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.6</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/kaguyasama.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 30px; margin-top:5px;">Kaguya-Sama: Love is War</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">R</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.5</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/pancreas.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 25px; margin-top:5px;">I Want To Eat Your Pancreas</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.0</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/bunny.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 20px; margin-top:5px;">Rascal Does Not Dream Of Bunny Girl Senpai</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.1</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/maidsama.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 20px; margin-top:5px;">Maid Sama!</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">R</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 7.9</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/toradora.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 25px; margin-top:5px;">Toradora!</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 8.0</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+      <div class="media-element_new">
+
+        <img class="horizontal-img" src="Images/Anime/wotakoi.jpg" alt="">
+
+        <div class="overlay"></div>
+        <div class="overlay-content">
+          <h1 class="delay-2 top-down" style="font-size: 22px; margin-top:5px;">Wotakoi: Love Is Hard For Otaku</h1>
+          <button class="btn  b3_i delay-4 top-down " title="Year" style="color:white">HD</button>
+          <button class="btn  b2_i delay-4 top-down " title="Seasons" style="color:white">PG-13</button>
+          <button class="btn  b1_i delay-4 top-down " title="IMDb" style="color:white"><span style="color:yellow;">IMDb</span>: 7.5</button>
+          <br />
+          <br />
+
+          <button class="btn btn-lg trailer_i delay-6 top-down wobble-vertical-on-hover" type="submit" style="color: #fff; border-radius:50px; margin: 0 10px;" value="" onclick="openWin24()">▶ Trailer</button>
+          <script type="text/javascript">
+            function openWin24() {
+              window.open("https://youtu.be/YoHD9XEInc0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+            }
+          </script>
+          <button class="btn btn-lg delay-6 top-down wobble-vertical-on-hover" style="margin: 0 10px; color: #fff; border-radius: 50px;" class="btn_i b4_i">▶ Play</button>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  </div>
+
+
+
+
+  <!-------------------------------Footer-------------------------------->
+  <div class="footer-basic">
+    <footer>
+      <div class="social"><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-github"></i></a><a href="#"><i class="fa-brands fa-twitter"></i></a><a href="#"><i class="fa-brands fa-facebook"></i></a></div>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Home</a></li>
+        <li class="list-inline-item"><a href="#">Premium</a></li>
+        <li class="list-inline-item"><a href="#">About</a></li>
+        <li class="list-inline-item"><a href="#">Terms</a></li>
+        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+      </ul>
+      <p class="copyright">Streamverse © 2023</p>
+    </footer>
+  </div>
+  <!---------scroll back to top button-->
+  <button id="scrollToTopButton" title="Go to top" class="ml-5">
+    <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+  </button>
+  <script>
+    $(document).ready(function() {
+      var scrollTopButton = document.getElementById("scrollToTopButton");
+      window.onscroll = function() {
+        scrollFunction()
+      };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          scrollTopButton.style.display = "block";
+        } else {
+          scrollTopButton.style.display = "none";
+        }
+      }
+
+      $("#scrollToTopButton").click(function() {
+        $('html ,body').animate({
+          scrollTop: 0
+        }, 800)
+      });
+    });
+  </script>
+  <script>
+    function logout() {
+      window.location.replace("login.html");
+    }
+  </script>
+  <!-- offcanva JS and footer js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script src="https://daniellaharel.com/raindrops/js/raindrops.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="js/main-min.js"></script>
+
+  <script>
+    jQuery('#waterdrop').raindrops({
+      color: '#292c2f',
+      canvasHeight: 150,
+      density: 0.1,
+      frequency: 20
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+  <script src="./static/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- OWL CAROUSEL -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+  <!-- APP SCRIPT -->
+  <script src="./js/app.js"></script>
+
+
+
+</body>
+
+</html>
