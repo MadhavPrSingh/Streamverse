@@ -1,0 +1,20 @@
+{
+  "name": "streamverse",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "madhav jyoti samarth abhishek",
+  "license": "ISC",
+  "dependencies": {
+    "alert": "^5.1.4",
+    "express": "^4.18.2",
+    "hbs": "^4.2.0",
+    "mongoose": "^7.3.1",
+    "nodemailer": "^6.9.3",
+    "nodemon": "^2.0.22"
+  }
+}

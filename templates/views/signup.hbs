@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="shortcut icon" href="./Images/Logo/Title_new.png" type="image/x-icon">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="static/register.css">
+	</head>
+
+	<body>
+
+		<div class="wrapper" style="background-image: url('images/cover1.png'); height: 500px;">
+			<div class="inner">
+				<div class="image-holder">
+					<img style="height: 80%; border-radius: 40px; width: 120%; margin-top: 30px;" src="images/logo/Streamverse_logo.png" alt="">
+				</div>
+				<form action="\register" method="POST">
+					<h3>Registration Form</h3>
+					<div class="form-group">
+						<input type="text" placeholder="First Name" class="form-control" name="firstName" value="">
+						<input type="text" placeholder="Last Name" class="form-control"  name="lastName" value="">
+					</div>
+					<div class="form-wrapper">
+						<input type="text" placeholder="Username" class="form-control"  name="userName" value="">
+						<i class="zmdi zmdi-account"></i>
+					</div>
+					<div class="form-wrapper">
+						<input type="text" placeholder="Email Address" class="form-control" name="email" value="">
+						<i class="zmdi zmdi-email"></i>
+					</div>
+					<div class="form-wrapper">
+						<input type="password" placeholder="Password" class="form-control" name="password" value="">
+						<i class="zmdi zmdilock"></i>
+					</div>
+					<div class="form-wrapper">
+						<input type="password" placeholder="Confirm Password" class="form-control" name="confirmPassword" value="">
+						<i class="zmdi zmdi-lock"></i>
+					</div>
+					    <a style="margin-left:180px;" href="login.html">Already a member?</a>
+					<button type="submit" value = "Register">Register
+						<i class="zmdi zmdi-arrow-right"></i>
+					</button>
+
+				</form>
+			</div>
+		</div>
+
+	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

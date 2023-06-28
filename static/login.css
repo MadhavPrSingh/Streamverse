@@ -1,0 +1,22 @@
+.g-signin2{
+
+   top: 50%;
+   left: 50%;
+   margin-top: 20px;
+   margin-left: 5px;
+   border-radius: 25px;
+}
+.abcRioButton {
+  width: 250px !important;
+  border-radius: 25px !important;
+
+}
+.abcRioButtonIcon {
+  padding: 16px 20px !important;
+
+}
+.abcRioButtonContents {
+  font-size: 14px !important;
+  font-family: "Ubuntu", sans-serif;
+
+}
