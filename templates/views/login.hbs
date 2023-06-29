@@ -1,42 +1,74 @@
 <!DOCTYPE html>
 <html>
-	<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LogIn</title>
-    <link rel="shortcut icon" href="./Images/Logo/Title_new.png" type="image/x-icon">
 
-		<!-- MATERIAL DESIGN ICONIC FONT -->
-		<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>LogIn</title>
+	<link rel="shortcut icon" href="./Images/Logo/Title_new.png" type="image/x-icon">
+	<meta http-equiv="X-UA-Comaptible" content="IE=edge">
+	<meta name="google-signin-client_id" content="834072369940-7d8f2l1qnmg3cag26qbvkhpr562c6t7e.apps.googleusercontent.com">
 
-		<!-- STYLE CSS -->
-		<link rel="stylesheet" href="static/register.css">
-	</head>
+	<!-- MATERIAL DESIGN ICONIC FONT -->
+	<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
 
-	<body>
 
-		<div class="wrapper" style="background-image: url('images/cover1.png'); height: 500px;">
-			<div class="inner">
-				<div class="image-holder">
-					<img style="height: 80%; border-radius: 40px; width: 120%; margin-top: 30px;" src="images/logo/Streamverse_logo.png" alt="">
-				</div>
-				<form action="/login" method="POST">
-					<h3>Registration Form</h3>
-					<div class="form-wrapper">
-						<input type="text" placeholder="Email Address" class="form-control" name="email" value="">
-						<i class="zmdi zmdi-email"></i>
-					</div>
-					<div class="form-wrapper">
-						<input type="password" placeholder="Password" class="form-control" name="password" value="">
-						<i class="zmdi zmdi-lock"></i>
-					</div>
-					          <a style="margin-left:210px;" href="signup.html">Not a member?</a>
-					<button>LogIn
-						<i class="zmdi zmdi-arrow-right"></i>
-					</button>
-				</form>
+	<!-- STYLE CSS -->
+	<link rel="stylesheet" href="static/register.css">
+	<link rel="stylesheet" href="static/login.css">
+</head>
+
+<body>
+
+	<div class="wrapper" style="background-image: url('images/cover1.png'); height: 500px;">
+		<div class="inner">
+			<div class="image-holder">
+				<img style="height: 80%; border-radius: 40px; width: 120%; margin-top: 30px;" src="images/logo/Streamverse_logo.png" alt="">
 			</div>
-		</div>
+			<form action="/login" method="POST">
+				<h3>Registration Form</h3>
+				<div class="form-wrapper">
+					<input type="text" placeholder="Email Address" class="form-control" name="email" value="">
+					<i class="zmdi zmdi-email"></i>
+				</div>
+				<div class="form-wrapper">
+					<input type="password" placeholder="Password" class="form-control" name="password" value="">
+					<i class="zmdi zmdi-lock"></i>
+				</div>
+				<a style="margin-left:210px;" href="signup.html">Not a member?</a>
+				<button style="border-radius:25px;">LogIn<i class="zmdi zmdi-arrow-right"></i></button>
 
-	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+				<div id="g_id_onload" style="margin-top:20px" padding: 25px;"
+					data-context="signin"
+					data-ux_mode="redirect"
+         data-client_id="834072369940-7d8f2l1qnmg3cag26qbvkhpr562c6t7e.apps.googleusercontent.com"
+				 login_uri="http://localhost/home.html">
+
+      </div>
+      <div class="g_id_signin"
+         data-type="standard"
+         data-size="large"
+         data-theme="outline"
+         data-text="sign_in_with"
+         data-shape="pill"
+				 data-width=320
+         data-logo_alignment="center">
+
+      </div>
+			</form>
+
+		</div>
+	</div>
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+	<script src="https://accounts.google.com/gsi/client"></script>
+
+
+
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
 </html>

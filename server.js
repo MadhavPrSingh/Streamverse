@@ -106,13 +106,17 @@ app.post("/register", async (req, res) => {
 
         }
         else{
-          res.send("Password does not match!");
+          res.send("ille");
         }
 
 
     }catch(error){
         console.log(error);
     }
+})
+
+app.post("/login.html", async (req, res) => {
+    res.render("home");
 })
 
 
