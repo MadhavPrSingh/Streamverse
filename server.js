@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const path = require("path");
 const hbs = require("hbs");
 const alert = require('alert');
+const nodemailer = require('nodemailer');
 
 require("./conn");
 
@@ -41,23 +42,30 @@ app.get("/login.html", function(req, res){
     res.render("login");
 });
 
+
+
 app.post("/login", async (req, res) => {
     try{
       const email = req.body.email;
       const password = req.body.password;
 
-      const useremail = await Register.findOne({email : email});
 
-      if(useremail.password === password){
-         res.status(201).render("home");
+      const useremail = await Register.findOne({email : email});
+      if(useremail.is_verified === 1){
+          if(useremail.password === password){
+             res.status(201).render("home");
+          }
+          else{
+            res.render("loginerror");
+          }
       }
       else{
-        res.send("Username or Password is incorrect");
+          res.render("error");
       }
     }catch(error){
       console.log(error);
     }
-})
+});
 
 app.get("/home.html", function(req, res){
   res.render("home");
@@ -79,6 +87,7 @@ app.get("/premium.html", function(req, res){
   res.sendFile(__dirname + "/premium.html");
 });
 
+
 app.get("/contactus.html", function(req, res){
   res.sendFile(__dirname + "/contactus.html");
 });
@@ -86,6 +95,45 @@ app.get("/contactus.html", function(req, res){
 app.get("/signup.html", function(req, res){
   res.render("signup");
 });
+
+//For Sending mail
+const sendVerifyMail = async(firstName, email, user_id) => {
+
+    try {
+
+      const transporter = nodemailer.createTransport({
+          host: 'smtp.gmail.com',
+          port: 587,
+          secure: false,
+          requireTLS: true,
+          auth: {
+              user: 'streamverse0@gmail.com',
+              pass: 'yeufcpmzubsmqwox'
+          }
+      });
+
+      const mailOptions = {
+          from: 'streamverse0@gmail.com',
+          to: email,
+          subject: 'Activate your Streamverse Account',
+          html: '<p>Hello '+ firstName +', Please Click here to <a href="http://localhost:3000/verify?id='+ user_id +'"> Verify <\a> your mail.<\p>'
+      }
+
+      transporter.sendMail(mailOptions, function(error, info){
+          if(error){
+              console.log(error);
+          }
+          else{
+              console.log("Email has been sent:- ", info.response);
+          }
+      })
+
+    }catch(error){
+      console.log(error.message);
+    }
+
+}
+
 
 app.post("/register", async (req, res) => {
     try {
@@ -100,20 +148,34 @@ app.post("/register", async (req, res) => {
               password : req.body.password,
               confirmPassword : req.body.confirmPassword
           });
-
           const register = await reg.save();
-          res.status(201).render("login");
-
+          if(register){
+            sendVerifyMail(req.body.firstName, req.body.email, reg._id);
+            res.status(201).render("success");
+          }
+          else{
+            res.render("signuperror");
+          }
         }
         else{
-          res.send("ille");
+            res.render("signuperror");
         }
-
-
     }catch(error){
         console.log(error);
     }
-})
+});
+
+app.get("/verify", async(req, res) => {
+    try{
+
+        const updateInfo = await Register.updateOne({_id: req.query.id}, { $set: { is_verified: 1} });
+        console.log(updateInfo);
+        res.render("login");
+
+    }catch(error){
+        console.log(error.message);
+    }
+});
 
 app.post("/login.html", async (req, res) => {
     res.render("home");
