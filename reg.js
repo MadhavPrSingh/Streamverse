@@ -26,6 +26,10 @@ const registerSchema = new mongoose.Schema({
     confirmPassword:{
       type: String,
       required: true
+    },
+    is_verified:{
+      type: Number,
+      default: 0
     }
 })
 
