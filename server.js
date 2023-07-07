@@ -5,6 +5,10 @@ const hbs = require("hbs");
 const alert = require('alert');
 const nodemailer = require('nodemailer');
 
+
+
+
+
 require("./conn");
 
 const Register = require("./reg");
@@ -15,10 +19,12 @@ const templatePath = path.join(__dirname + '/templates/views/');
 
 const app = express();
 
+const fs = require("fs");
 
 
 
 app.use('/images', express.static(path.join(__dirname, 'Images')));
+app.use('/videos', express.static(path.join(__dirname, 'Videos')));
 app.use('/images', express.static(path.join(__dirname, 'static')));
 app.use('/images', express.static(path.join(__dirname, 'js')));
 app.use('/static', express.static(path.join(__dirname, 'static')));
@@ -26,6 +32,8 @@ app.use('/js', express.static(path.join(__dirname, 'js')));
 app.use('/images', express.static(path.join(__dirname + "/loaderLogo.webp")));
 app.use(express.static(__dirname + '/static'));
 app.use(express.static(__dirname + '/js'));
+app.use(express.static(__dirname + '/Videos'));
+
 
 app.use(express.json());
 app.set("view engine","hbs");
@@ -69,6 +77,46 @@ app.post("/login", async (req, res) => {
 
 app.get("/home.html", function(req, res){
   res.render("home");
+});
+
+app.get("/player.html", function(req, res){
+  res.sendFile(__dirname + "/player.html");
+})
+
+app.get("/video", function (req, res) {
+  // Ensure there is a range given for the video
+  const range = req.headers.range;
+  if (!range) {
+    res.status(400).send("Requires Range header");
+  }
+
+  // get video stats (about 61MB)
+  const videoPath = "bigbuck.mp4";
+  const videoSize = fs.statSync("bigbuck.mp4").size;
+
+  // Parse Range
+  // Example: "bytes=32324-"
+  const CHUNK_SIZE = 10 ** 6; // 1MB
+  const start = Number(range.replace(/\D/g, ""));
+  const end = Math.min(start + CHUNK_SIZE, videoSize - 1);
+
+  // Create headers
+  const contentLength = end - start + 1;
+  const headers = {
+    "Content-Range": `bytes ${start}-${end}/${videoSize}`,
+    "Accept-Ranges": "bytes",
+    "Content-Length": contentLength,
+    "Content-Type": "video/mp4",
+  };
+
+  // HTTP Status 206 for Partial Content
+  res.writeHead(206, headers);
+
+  // create video read stream for this particular chunk
+  const videoStream = fs.createReadStream(videoPath, { start, end });
+
+  // Stream the video chunk to the client
+  videoStream.pipe(res);
 });
 
 app.get("/anime.html", function(req, res){
