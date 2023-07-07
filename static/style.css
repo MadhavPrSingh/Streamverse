@@ -122,6 +122,79 @@ body {
   margin-bottom: 0px;
 
 }
+.search_bx2 {
+    width: 1050px;
+    height: 300px;
+    border: 1px solid #fff;
+    position: absolute;
+    top: 205px;
+    z-index: 10;
+    border-radius: 10px;
+    background: rgb(184, 184, 184, .5);
+    overflow: auto;
+    transition: .3s;
+    visibility: hidden;
+    opacity: 1;
+
+}
+
+.search_bx2::-webkit-scrollbar {
+    width: 7px;
+    background: rgb(184, 184, 184, .3) !important;
+    border-radius: 20px !important;
+}
+
+.search_bx2::-webkit-scrollbar-thumb{
+    background: rgb(184, 184, 184, .7);
+    border-radius: 20px;
+}
+
+.search_bx2 a{
+    text-decoration: none;
+    color: #fff;
+    width: 100%;
+    height: 80px;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+
+}
+
+.search_bx2 a:hover{
+    background: rgb(184, 184, 184, .9);
+    border-bottom-color: #fff;
+
+}
+
+.search_bx2 a img{
+    width: 120px;
+    height: 80px;
+    border-radius: 5px;
+
+}
+
+.search_bx2 a .content2{
+    color: #fff;
+    margin-left: 10px;
+    margin-top: 15px;
+
+}
+
+
+
+.search_bx2 a .content2 h6{
+    font-size: 25px;
+
+}
+
+
+.search_bx2 a .content2 p{
+    color: rgb(255, 255, 255, .7);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
 .logout {
   background-color:#11999E; color: #E4F9F5; border-radius:25px;
   border-style: none;
@@ -668,15 +741,17 @@ textarea.ng-valid {
   overflow-y: auto;
   overflow-x: hidden;
   max-width: 100%;
+  border-radius: 25px;
 }
 
 ::-webkit-scrollbar-track {
   border: 2px solid #2c2f30;
-  background-color: #40514E;
+  border-radius: 5px;
+  background-color: rgb(184, 184, 184, .3);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #30E3CA !important;
+  background-color: background: rgb(184, 184, 184, .7) !important;
 }
 
 ::-webkit-scrollbar-track:hover {
@@ -690,7 +765,7 @@ textarea.ng-valid {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #11999E;
+  background-color: background: rgb(184, 184, 184, .7);
   border-radius: 25px;
 }
 
@@ -888,17 +963,18 @@ i:hover {
 
 ::-webkit-scrollbar-track {
   border: 0px solid #2c2f30;
-  background-color: red;
+  background-color: background: #fff;
 }
 
 ::-webkit-scrollbar {
   width: 0px;
-  background-color: #2c2f30;
+  background-color: #fff;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: black;
   border-radius: 10px;
+  height: 7px;
 }
 
 * {
